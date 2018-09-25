@@ -1,0 +1,41 @@
+
+ xotd	This project contains an implementation of RFC1613 XOT
+		(X.25 over TCP/IP), using x25tap Linux module.
+
+ Author:	Stephane Fillod, <sfillod@charybde.gyptis.frmug.org>
+
+		This program is free software; you can redistribute it
+		and/or  modify it under  the terms of  the GNU General
+		Public  License as  published  by  the  Free  Software
+		Foundation;  either  version 2 of the License, or  (at
+		your option) any later version.
+
+ 		This program is distributed in the hope that it will be useful,
+ 		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+ Modifications:
+
+ 10/2002 by JH:
+
+	Fix this up so we can talk to multiple remote xot devices
+
+	Tell X.25 if TCP call clears
+
+	Don't try to use same TCP call for multiple X.25 calls,
+		leads to horrid clearing windows.
+
+	Make outbound calls in thread, to avoid blocking everyone
+
+  08/2006 by Shaun Pereira
+  	Fix to run multiple tap devices on Linux host
+
+  2016 by Denis Zavgorodny
+    xotd server only works in daemon mode
+    xotd server accepts connections from any nodes
+    Add conf file
+    Add logging and level logging
+    handle signal HUP sent to xotd for close/open log file
+    Add protection against running multiple copies of the server
+    fix minor error
