@@ -1,1 +1,25 @@
 
+* Mon Jan 8 1999 Stephane Fillod <sfillod@charybde.gyptis.frmug.org> 0.04
+- patch from Andrew Kavko <andrew@bveb.belpak.minsk.by> to make
+  xotd work correctly with Cisco 2504, regarding section 6.1 of the RFC.
+- remove sleep call before closing socket
+
+* Fri Oct 2 1998 Stephane Fillod <sfillod@charybde.gyptis.frmug.org> 0.03
+ - includes tweak to compile under glibc2 
+   thanks to Hannu Martikka <martikka@gamgee.ntc.nokia.com>
+ - fix a mis-understanding of bind behaviour
+
+* Jan 2006 Shaun Pereira
+  Modified to run with the Linux Kernel version 2.6.17
+
+* Aug 2006 Shaun Pereira
+  Fixed to allow run with multiple tap devices
+
+* 2016 by Denis Zavgorodny
+    xotd server only works in daemon mode
+    xotd server accepts connections from any nodes
+    Add conf file
+    Add logging and level logging
+    handle signal HUP sent to xotd for close/open log file
+    Add protection against running multiple copies of the server
+    fix minor error
