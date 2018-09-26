@@ -119,7 +119,22 @@ sfillod@charybde.gyptis.frmug.org
 
                              README from Denis Zavgorodny
 
+Thank you for developing this program.
+
 This, very necessary software for me, was finalized and rolled for my purposes.
 This software is tested for RHEL Server release 5.3 beta kernel 2.6.18-120.el5. with another such same server.
+Hardware  information: Dell PowerEdge T410,Intel® Xeon® 5500 2.53 GHz 12MB 4 core, RAM 4 GB,  BroadCom NetXtreme II Gigabit Ethernet.
+Test results:
+-  baud rate over a single connection X.25 (packet length 256 bytes, window 7) - 6.8 Mbps.
+-  total transfer rate for many parallel connections It is limited by Ethernet speed (100Mbit,) and is 
+	60 Mbit/s with packet length 256 bytes, window 7 
+	80 Mbit/s with packet length 1024, window 7
 
+Limit on the maximum number of virtual connections - 300 is due to the maximum amount of virtual memory in one process in
+32 bit Linux OS version - 3 gigabytes. XOTd multithreaded server application (pthreads). One stream is allocated 10 megabytes of virtual
+memory on the stack. Total 10MB for 300 streams is 3 GB. If necessary, this limitation can be removed, or by reducing the 
+amount of memory per thread (using ulimit in init script), or using a 64-bit version of the Linux OS. 
 
+	
+Goodbye! (all claims to English to google translator ;)
+2018
