@@ -15,3 +15,11 @@
 * Aug 2006 Shaun Pereira
   Fixed to allow run with multiple tap devices
 
+* 2016 by Denis Zavgorodny
+    xotd server only works in daemon mode
+    xotd server accepts connections from any nodes
+    Add conf file
+    Add logging and level logging
+    handle signal HUP sent to xotd for close/open log file
+    Add protection against running multiple copies of the server
+    fix minor error
